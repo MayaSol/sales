@@ -1,0 +1,167 @@
+@mixin col-text {
+  text-align: left;
+  padding-left: 15px;
+  font-size: 14px;
+}
+
+
+.data-table {
+  margin-bottom: 20px;
+  border: 1px solid #949494;
+  border-collapse: collapse;
+  color: #141414;
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  td {
+    padding: 15px 5px;
+    border: 1px solid #949494;
+    text-align: center;
+  }
+  .col-period,
+  .col-name,
+  .col-city {
+    @include col-text;
+  }
+  .col-btn {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .hd-num {
+    min-width: 50px;
+  }
+  .hd-city {
+    min-width: 105px;
+  }
+  .hd-address {
+    min-width: 190px;
+  }
+  .hd-period {
+    min-width: 100px;
+  }
+  .hd-name {
+    min-width: 190px;
+  }
+  .hd-shops,
+  .hd-trade-reps {
+    min-width: 130px;
+  }
+  .hd-ordered,
+  .hd-delivered,
+  .hd-paid {
+    min-width: 115px;
+  }
+  .hd-sku {
+    min-width: 105px;
+  }
+  .hd-photo {
+    padding: 5px;
+    min-width: 130px;
+  }
+  .hd-period {
+    min-width: 135px;
+  }
+  .hd-summ {
+    min-width: 100px;
+  }
+  .hd-status {
+    min-width: 142px;
+    color: #545454;
+    font-size: 16px;
+  }
+  .hd-title,
+  .hd-brand {
+    min-width: 190px;
+  }
+  .hd-category,
+  .hd-mrc {
+    min-width: 130px;
+  }
+  .hd-company {
+    min-width: 175px;
+  }
+  .hd-contact {
+    min-width: 160px;
+  }
+  .hd-task-amount,
+  .hd-complete,
+  .hd-paid {
+    min-width: 120px;
+  }
+  .hd-debt {
+    min-width: 150px;
+  }
+  .hd-buttons {
+    min-width: 250px;
+  }
+  .hd-shop-title {
+    min-width: 115px;
+  }
+  .hd-phone {
+    min-width: 130px;
+  }
+  .hd-bank-details {
+    min-width: 100px;
+  }
+
+  &--trade-reps {
+    .hd-city,
+    .hd-complete,
+    .hd-sum,
+    .hd-paid,
+    .hd-debt {
+      min-width: 100px;
+    }
+    .col-phone {
+      min-width: 140px;
+      @include col-text;
+    }
+    .btn--pay{
+      background-color: #4d4660;
+    }
+  }
+
+thead {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+
+.btn--table {
+  display: inline-block;
+  padding: 8px 15px;
+  color: #ffffff;
+  border-radius: 5px;
+  background-color: #545454;
+  text-transform: capitalize;
+  &:hover,
+  &:active {
+    color: #ffffff;
+  }
+}
+
+.btn--photo {
+  box-sizing: border-box;
+  background-image: url("img/photo.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 24px 21px;
+  width: 35px;
+  height: 35px;
+  background-color: #545454;
+  border-radius: 50%;
+}
+
+.btn--load {
+  padding-right: 40px;
+  background-image: url("img/icon-load.svg");
+  background-repeat: no-repeat;
+  background-position: center right 16px;
+}
+
+.btn--contact {
+  background-color: #d96475;
+}

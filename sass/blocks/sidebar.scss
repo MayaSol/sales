@@ -1,0 +1,87 @@
+.sidebar {
+  display: flex;
+  justify-content: center;
+  width: $sidebar-width;
+  min-width: $sidebar-width;
+  overflow: auto;
+  background-color: $sidebar-bg-color;
+  padding-top: 100px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $sidebar-menu-color;
+    &:hover,
+    &:active {
+      color: $sidebar-menu-color;
+  }
+}
+
+  &__item {
+    margin-bottom: 19px;
+    color: $sidebar-menu-color;
+    font-family: $font-family;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    svg {
+      fill: $sidebar-menu-color;
+      margin-right: 5px;
+    }
+    &--active {
+      svg {
+        fill: #ffffff;
+      }
+      color: #ffffff;
+      .sidebar__link {
+        color: #ffffff;
+      }
+    }
+    &--create {
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+    &--choose {
+      svg {
+        width: 18px;
+        height: 21px;
+      }
+    }
+    &--invoice {
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+    &--rest {
+      svg {
+        width: 22px;
+        height: 18px;
+      }
+    }
+    &--clients {
+      svg {
+        width: 21px;
+        height: 18px;
+      }
+    }
+    &--warehouse {
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+
+}
