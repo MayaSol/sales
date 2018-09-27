@@ -8,6 +8,10 @@
   font-size: 15px;
   font-weight: 400;
 
+  &__container {
+    margin-bottom: 50px;
+  }
+
   &__item:not(:last-child) {
     padding-right: 5px;
     &::after {

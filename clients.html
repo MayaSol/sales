@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('head.html')
+
+<body>
+
+  @@include('header.html')
+
+
+  <main>
+
+    @@include('sidebar.html', {
+      "create-item-class": "",
+      "tasks-item-class": "",
+      "invoice-item-class": "",
+      "goods-item-class": "",
+      "clients-item-class": "sidebar__item--active",
+      "shops-item-class": "",
+      "trade-reps-item-class": ""
+    })
+
+
+    <section class="content">
+
+      @@include('breadcrumbs.html')
+
+
+      <section class="select">
+        <label for="select-city"><span>Город</span></label>
+        @@include('select-city.html')
+
+
+        <label for="select-warehouse"><span>Склад</span></label>
+        @@include('select-warehouse.html')
+      </section>
+
+      <section class="data">
+
+        <table id="table-company" class="data-table data-table--company">
+          <thead>
+            <tr>
+              <td class="hd-num">№</td>
+              <td class="hd-company">Компания</td>
+              <td class="hd-contact">Контактное лицо</td>
+              <td class="hd-task-amount">Количество задач</td>
+              <td class="hd-complete">Выполнено</td>
+              <td class="hd-paid">Оплачено</td>
+              <td class="hd-debt">Задолженность</td>
+              <td class="hd-buttons"></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-num">1</td>
+              <td class="col-company">ООО «Русское море»</td>
+              <td class="col-contact">Иванов Михаил</td>
+              <td class="col-task-amount">40</td>
+              <td class="col-complete">35</td>
+              <td class="col-paid">25</td>
+              <td class="col-debt">3500</td>
+              <td class="col-buttons">
+                <a href="" class="btn btn--table btn--change">Изменить</a>
+                <a href="" class="btn btn--table btn--contact">Связаться</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-num">2</td>
+              <td class="col-company">ООО «Русское море»</td>
+              <td class="col-contact">Иванов Михаил</td>
+              <td class="col-task-amount">40</td>
+              <td class="col-complete">35</td>
+              <td class="col-paid">25</td>
+              <td class="col-debt">3500</td>
+              <td class="col-buttons">
+                <a href="" class="btn btn--table btn--change">Изменить</a>
+                <a href="" class="btn btn--table btn--contact">Связаться</a>
+              </td>
+            </tr>
+          </tbody>
+       </table>
+
+      </section>
+
+    </section>
+
+  </main>
+
+
+  @@include('footer.html')
+
+
+</body>
+</html>

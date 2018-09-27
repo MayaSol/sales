@@ -1,0 +1,38 @@
+.publication {
+  display: flex;
+  justify-content: space-between;
+  &__label-date {
+    //display: block;
+  }
+  &__period-inner {
+    display: flex;
+    justify-content: space-between;
+    label {
+      position: relative;
+      padding-left: 30px;
+      color: #141414;
+      font-family: $font-family;
+      font-size: 15px;
+      font-weight: 700;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background-image: url('img/icon-unchecked-small.svg');
+      }
+    }
+    input {
+      display: none;
+    }
+    input:checked~label::before {
+      background-image: url('img/icon-checked-small.svg');
+    }
+  }
+  &__period-col:not(:last-child) {
+    margin-right: 130px;
+  }
+}

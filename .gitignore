@@ -1,4 +1,6 @@
 node_modules/
 *.css
-/
-./
+_design
+SalesMan/
+SalesMan.zip
+build/

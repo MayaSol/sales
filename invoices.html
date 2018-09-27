@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('head.html')
+
+<body>
+
+  @@include('header.html')
+
+
+  <main>
+
+    @@include('sidebar.html', {
+      "create-item-class": "",
+      "tasks-item-class": "",
+      "invoice-item-class": "sidebar__item--active",
+      "goods-item-class": "",
+      "clients-item-class": "",
+      "shops-item-class": "",
+      "trade-reps-item-class": ""
+    })
+
+
+    <section class="content">
+
+      @@include('breadcrumbs.html')
+
+
+      <section class="select">
+        <label for="select-city"><span>Город</span></label>
+        @@include('select-city.html')
+
+        <label for="select-warehouse"><span>Склад</span></label>
+        @@include('select-warehouse.html')
+      </section>
+
+      <section class="data">
+
+        <table id="table-invoice" class="data-table data-table--invoice">
+          <thead>
+            <tr>
+              <td class="hd-num">№</td>
+              <td class="hd-period">Период</td>
+              <td class="hd-name">Название</td>
+              <td class="hd-city">Город</td>
+              <td class="hd-shops">Магазины.</td>
+              <td class="hd-trade-reps">ТоргПреды</td>
+              <td class="hd-ordered">Заказано</td>
+              <td class="hd-delivered">Доставлено</td>
+              <td class="hd-paid">Оплачено</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-num">1</td>
+              <td class="col-period">07/09/18</td>
+              <td class="col-name">23 Кофе 46058432125</td>
+              <td class="col-city">Красноярск</td>
+              <td class="col-shops">1/100</td>
+              <td class="col-trade-reps">5</td>
+              <td class="col-ordered">10000</td>
+              <td class="col-delivered">10000</td>
+              <td class="col-status">Оплачено</td>
+            </tr>
+            <tr>
+              <td class="col-num">2</td>
+              <td class="col-period">07/09/18</td>
+              <td class="col-name">23 Кофе 46058432125</td>
+              <td class="col-city">Ижевск</td>
+              <td class="col-shops">25/150</td>
+              <td class="col-trade-reps">15</td>
+              <td class="col-ordered">15000</td>
+              <td class="col-delivered">10000</td>
+              <td class="col-status"><a href="" class="btn btn--table btn--pay">Оплатить</a></td>
+            </tr>
+          </tbody>
+       </table>
+
+
+      </section>
+
+    </section>
+
+  </main>
+
+
+  @@include('footer.html')
+
+
+</body>
+</html>

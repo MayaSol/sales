@@ -4,7 +4,6 @@
   font-size: 14px;
 }
 
-
 .data-table {
   margin-bottom: 20px;
   border: 1px solid #949494;
@@ -21,7 +20,9 @@
   }
   .col-period,
   .col-name,
-  .col-city {
+  .col-city,
+  .col-address,
+  .col-contact {
     @include col-text;
   }
   .col-btn {
@@ -61,9 +62,6 @@
   }
   .hd-period {
     min-width: 135px;
-  }
-  .hd-summ {
-    min-width: 100px;
   }
   .hd-status {
     min-width: 142px;

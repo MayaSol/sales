@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('head.html')
+
+<body>
+
+  @@include('header.html')
+
+
+  <main>
+
+    @@include('sidebar.html', {
+      "create-item-class": "",
+      "tasks-item-class": "",
+      "invoice-item-class": "",
+      "goods-item-class": "",
+      "clients-item-class": "",
+      "shops-item-class": "sidebar__item--active",
+      "trade-reps-item-class": ""
+    })
+
+
+    <section class="content">
+
+      @@include('breadcrumbs.html')
+
+
+      <section class="select">
+        <label for="select-city"><span>Город</span></label>
+        @@include('select-city.html')
+
+
+        <label for="select-warehouse"><span>Склад</span></label>
+        @@include('select-warehouse.html')
+      </section>
+
+      <section class="data">
+
+        <table id="table-shops" class="data-table data-table--shops">
+          <thead>
+            <tr>
+              <td class="hd-num">№</td>
+              <td class="hd-shop-title">Название</td>
+              <td class="hd-address">Адрес</td>
+              <td class="hd-contact">Контактное лицо</td>
+              <td class="hd-ordered">Заказано</td>
+              <td class="hd-paid">Оплачено</td>
+              <td class="hd-debt">Задолженность</td>
+              <td class="hd-buttons"></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-num">1</td>
+              <td class="col-shop-title">Орбита</td>
+              <td class="col-address">г.Красноярск, ул. Вавилова, д. 50</td>
+              <td class="col-contact">Иванов Михаил</td>
+              <td class="col-ordered">10000</td>
+              <td class="col-paid">6500</td>
+              <td class="col-debt">3500</td>
+              <td class="col-buttons">
+                <a href="" class="btn btn--table btn--change">Изменить</a>
+                <a href="" class="btn btn--table btn--contact">Связаться</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-num">2</td>
+              <td class="col-shop-title">Наш маркет</td>
+              <td class="col-address">г.Ижевск, ул. Декабристов, д.23</td>
+              <td class="col-contact">Иванов Иван</td>
+              <td class="col-ordered">20000</td>
+              <td class="col-paid">10000</td>
+              <td class="col-debt">10000</td>
+              <td class="col-buttons">
+                <a href="" class="btn btn--table btn--change">Изменить</a>
+                <a href="" class="btn btn--table btn--contact">Связаться</a>
+              </td>
+            </tr>
+          </tbody>
+       </table>
+
+      </section>
+
+    </section>
+
+  </main>
+
+
+  @@include('footer.html')
+
+
+</body>
+</html>

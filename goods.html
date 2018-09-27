@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('head.html')
+
+<body>
+
+  @@include('header.html')
+
+
+  <main>
+
+    @@include('sidebar.html', {
+      "create-item-class": "",
+      "tasks-item-class": "",
+      "invoice-item-class": "",
+      "goods-item-class": "sidebar__item--active",
+      "clients-item-class": "",
+      "shops-item-class": "",
+      "trade-reps-item-class": ""
+    })
+
+
+    <section class="content">
+
+      @@include('breadcrumbs.html')
+
+
+      <section class="select">
+        <label for="select-city"><span>Город</span></label>
+        @@include('select-city.html')
+
+
+        <label for="select-warehouse"><span>Склад</span></label>
+        @@include('select-warehouse.html')
+      </section>
+
+      <section class="data">
+
+       <table id="table-goods" class="data-table data-table--goods">
+          <thead>
+            <tr>
+              <td class="hd-num">№</td>
+              <td class="hd-sku">SKU</td>
+              <td class="hd-title">Название</td>
+              <td class="hd-category">Категория</td>
+              <td class="hd-brand">Бренд</td>
+              <td class="hd-mrc">МРЦ</td>
+              <td class="hd-photo">Фото</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-num">1</td>
+              <td class="col-sku">4604575748</td>
+              <td class="col-title">Сок J7 яблочный 1л</td>
+              <td class="col-category">Соки</td>
+              <td class="col-brand">J7</td>
+              <td class="col-mrc">75</td>
+              <td class="col-photo"><a href="" class="btn btn--table btn--load">Загрузить</a></td>
+            </tr>
+            <tr>
+              <td class="col-num">1</td>
+              <td class="col-sku">4604575748</td>
+              <td class="col-title">Кофе Jakobs 400г</td>
+              <td class="col-category">Кофе</td>
+              <td class="col-brand">Jakobs</td>
+              <td class="col-mrc">450</td>
+              <td class="col-photo"><a href="" class="btn btn--table btn--photo"></a></td>
+            </tr>
+          </tbody>
+       </table>
+
+      </section>
+
+    </section>
+
+  </main>
+
+
+  @@include('footer.html')
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+.create-shops {
+  &__category-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__category-col {
+    width: 33%;
+    margin-right: 18px;
+    &::last-child {
+      margin-right: 0;
+    }
+  }
+  label {
+    position: relative;
+    padding-left: 30px;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-image: url('img/icon-unchecked-small.svg');
+    }
+  }
+  input[type="checkbox"] {
+    display: none;
+  }
+  input[type="checkbox"]:checked~label::before {
+    background-image: url('img/icon-checked-small.svg');
+  }
+}

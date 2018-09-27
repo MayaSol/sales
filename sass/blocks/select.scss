@@ -11,55 +11,20 @@
       margin: auto;
     }
   }
-  &__wrapper {
-  position: relative;
-  box-sizing: border-box;
-  height: 41px;
-  border-radius: 5px;
-  border: 1px solid #d3d6df;
-  //background-color: #ffffff;
-  color: #555555;
-  font-family: $font-family;
-  font-size: 15px;
-  font-weight: 400;
   select {
+    width: 100%;
     padding: 10px 15px;
     height: 41px;
     background: transparent;
     border: 0;
+    font-family: $font-family--narrow;
     appearance: none;            /* remove arrow        */
     -webkit-appearance: none;    /* remove arrow Chrome */
     -moz-appearance: none;       /* remove arrow FF     */
   }
-  &::-ms-expand {
-    display: none;             /* remove arrow IE     */
-  }
-
-  &--city {
-    margin: 20px 0;
-    width: 352px;
-    margin-right: 45px;
-    select {
-      width: 352px;
-    }
-  }
-
-    &--warehouse {
-    margin: 20px 0;
-    width: 233px;
-    select {
-      width: 233px;
-    }
-  }
-
-
-
-
-  }
-
   &__arrow {
     position: absolute;
-    right: 0;
+    right: 40px;
     top: 0;
     width: 40px;
     height: 100%;
@@ -76,7 +41,73 @@
       z-index: -1;
     }
   }
+  &--city,
+  &--hyper,
+  &--super,
+  &--shop,
+  &--warehouse {
+    .select__arrow {
+      right: 0;
+    }
+  }
 
+  &__ok {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    border-left: 1px solid #d3d6df;
+  }
+  &__wrapper {
+    position: relative;
+    box-sizing: border-box;
+    height: 41px;
+    border-radius: 5px;
+    border: 1px solid #d3d6df;
+    //background-color: #ffffff;
+    color: #555555;
+    font-size: 15px;
+    font-weight: 400;
+    &::-ms-expand {
+      display: none;             /* remove arrow IE     */
+    }
+
+    &--sku {
+      width: 292px;
+      select {
+        padding-left: 8px;
+      }
+    }
+    &--brend {
+      width: 302px;
+    }
+    &--category {
+      width: 284px;
+    }
+    &--city {
+      margin: 20px 0;
+      width: 352px;
+      margin-right: 45px;
+      select {
+        width: 352px;
+      }
+    }
+    &--hyper,
+    &--super,
+    &--shop {
+      width: 362px;
+    }
+      &--warehouse {
+      margin: 20px 0;
+      width: 233px;
+      select {
+        width: 233px;
+      }
+    }
+
+  }
 
   select option {
     color: blue;

@@ -1,319 +1,236 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
-	<title>Document</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+@@include('head.html')
 
 <body>
 
   @@include('header.html')
 
-
   <main>
 
-    @@include('sidebar.html')
-
+    @@include('sidebar.html', {
+      "create-item-class": "sidebar__item--active",
+      "choose-item-class": "",
+      "invoice-item-class": "",
+      "rest-item-class": "",
+      "clients-item-class": "",
+      "warehouse-item-class": ""
+    })
 
     <section class="content">
+      <div class="content__inner">
 
-      @@include('breadcrumbs.html')
+    <section class="breadcrumbs__container">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumbs__item">Задачи</li>
+        <li class="breadcrumbs__item">Создать задачу</li>
+      </ul>
+    </section>
 
+      <form class="form-create">
 
-      <section class="select">
-        <label for="select-city"><span>Город</span></label>
-        <div  class="select__wrapper select__wrapper--city">
-          <select id="select-city">
-            <option value="" disabled selected>Выбрать город</option>
-            <option value="city-01">Москва</option>
-            <option value="city-02">Санкт-Петербург</option>
-          </select>
-          <div class="select__arrow">
-              <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-arrow-up"></use>
-              </svg>
+        <section class="form-create__section create-goods">
+
+          <div class="form-create__delimiter">
+            <div class="form-create__no">1</div>
           </div>
+
+          <div class="create-goods__header">
+              <div class="create-goods__subtitle">SKU</div>
+              <div class="create-goods__subtitle">Бренд</div>
+              <div class="create-goods__subtitle">Категория</div>
+              <div class="create-goods__subtitle">Цена</div>
+          </div>
+
+          <div class="create-goods__row">
+            @@include('select-sku.html')
+            @@include('select-brend.html')
+            @@include('select-category.html')
+            <div class="create-goods__price">
+              <div class="create-goods__price-inner">
+                <input type="text">
+                <div><span>&#x20bd;</span></div>
+              </div>
+            </div>
+            <div class="create-goods__photo">
+              <button class="create-goods__btn btn btn--load-photo">Загрузить фото</button>
+            </div>
+          </div>
+
+          <div class="create-goods__row">
+            @@include('select-sku.html')
+            @@include('select-brend.html')
+            @@include('select-category.html')
+             <div class="create-goods__price">
+                <div class="create-goods__price-inner">
+                  <input type="text">
+                  <div><span>&#x20bd;</span></div>
+                </div>
+              </div>
+              <div class="create-goods__photo">
+                <button class="create-goods__btn btn btn--load-photo">Загрузить фото</button>
+              </div>
+          </div>
+
+          <div class="create-goods__row">
+            @@include('select-sku.html')
+            @@include('select-brend.html')
+            @@include('select-category.html')
+              <div class="create-goods__price">
+                <div class="create-goods__price-inner">
+                  <input type="text">
+                  <div><span>&#x20bd;</span></div>
+                </div>
+              </div>
+              <div class="create-goods__photo">
+                <button class="create-goods__btn btn btn--load-photo">Загрузить фото</button>
+              </div>
+          </div>
+
+          <button class="create-goods__btn btn btn--goods-add">Добавить товар</button>
+
+        </section>
+
+        <section class="form-create__section motivation">
+          <div class="motivation__header">Мотивация</div>
+          <div class="motivation__content">
+            <div class="motivation__col motivation__col--percent">
+              <div class="motivation__col-inner">
+                <div class="motivation__subheader">Процент от продаж</div>
+                <div class="motivation__input motivation__input--percent">
+                  <input type="number">
+                  <div><span>&#37;</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="motivation__col motivation__col--retro-bonus">
+              <div class="motivation__col-inner">
+                <div class="motivation__subheader">Ретро Бонус</div>
+
+                  <div class="motivation__row motivation__row--retro-bonus">
+                    <div class="motivation__input motivation__input--bonus">
+                      <input type="number">
+                      <div><span>&#37;</span></div>
+                    </div>
+                    <div class="motivation__input motivation__input--sum-for">
+                      <div>за</div>
+                      <input type="number">
+                      <div><span>&#x20bd;</span></div>
+                    </div>
+                  </div>
+
+                  <div class="motivation__row motivation__row--retro-bonus">
+                    <div class="motivation__input motivation__input--bonus">
+                      <input type="number">
+                      <div><span>&#37;</span></div>
+                    </div>
+                    <div class="motivation__input motivation__input--sum-for">
+                      <div>за</div>
+                      <input type="number">
+                      <div><span>&#x20bd;</span></div>
+                    </div>
+                  </div>
+
+                  <div class="motivation__row motivation__row--retro-bonus">
+                    <div class="motivation__input motivation__input--bonus">
+                      <input type="number">
+                      <div><span>&#37;</span></div>
+                    </div>
+                    <div class="motivation__input motivation__input--sum-for">
+                      <div>за</div>
+                      <input type="number">
+                      <div><span>&#x20bd;</span></div>
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+            <div class="motivation__col motivation__col--enter-shop">
+              <div class="motivation__col-inner">
+                <div class="motivation__subheader">Вход в магазин</div>
+                <div class="motivation__input motivation__input--enter-shop">
+                  <input type="number">
+                  <div><span>&#x20bd;</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+        <section class="form-create__section create-shops">
+          <div class="form-create__delimiter form-create__delimiter--shops">
+            <div class="form-create__no">2</div>
+          </div>
+
+          <div class="create-shops__header">Город</div>
+          @@include('select-city.html')
+          <div class="create-shops__category">
+            <div class="create-shops__header">Категория магазинов</div>
+
+              <div class="create-shops__category-inner">
+                <div class="create-shops__category-col">
+                  <input type="checkbox" name="shops-category" value="hyper" id="shops-hyper">
+                  <label for="shops-hyper">Гипермаркеты</label>
+                  @@include('select-hyper.html')
+                </div>
+
+                <div class="create-shops__category-col">
+                  <input type="checkbox" name="shops-category" value="super" id="shops-super">
+                  <label for="shops-super">Супермаркеты</label>
+                  @@include('select-super.html')
+                </div>
+
+                <div class="create-shops__category-col">
+                  <input type="checkbox" name="shops-category" value="shop" id="shops-shop">
+                  <label for="shops-shop">Магазины</label>
+                  @@include('select-shop.html')
+                </div>
+            </div>
+
+          </div>
+        </section>
+
+
+        <div class="form-create__delimiter form-create__delimiter--publication">
+          <div class="form-create__no">3</div>
         </div>
 
-        <label for="select-warehouse"><span>Склад</span></label>
-        <div class="select__wrapper select__wrapper--warehouse">
-          <select id="select-warehouse">
-            <option value="" disabled selected>Выбрать склад</option>
-            <option value="wharehouse-01">Склад 1</option>
-            <option value="wharehouse-02">Склад 2</option>
-            <option value="wharehouse-03">Склад 3</option>
-          </select>
-          <div class="select__arrow">
-              <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-arrow-up"></use>
-              </svg>
+        <section class="publication">
+          <div class="publication__date">
+            <label for="publication-date" class="publication__label-date">Дата публикации</label>
+            <input type="date" placeholder="" id="publication-date">
           </div>
-        </div>
-      </section>
 
-      <section class="data">
+          <div class="publication__period">
+            <div class="publication__subheader">Периодичность</div>
+            <div class="publication__period-inner">
+              <div class="publication__period-col">
+              <input type="radio" name="publication-period" value="month" id="period-month">
+              <label for="period-month">Месяц</label>
+            </div>
+            <div class="publication__period-col">
+              <input type="radio" name="publication-period" value="quarter" id="period-quarter">
+              <label for="period-quarter">Квартал</label>
+            </div>
+            <div class="publication__period-col">
+              <input type="radio" name="publication-period" value="year" id="period-year">
+              <label for="period-year">Год</label>
+            </div>
+            </div>
+          </div>
+        </section>
 
+      <button type="submit" class="form-create__btn form-create__btn--submit btn">Создать задачу</button>
 
-       <table id="table-ordered-01" class="data-table data-table--ordered-01">
-          <thead>
-            <tr>
-              <td class="hd-num">№</td>
-              <td class="hd-period">Период</td>
-              <td class="hd-name">Название</td>
-              <td class="hd-city">Город</td>
-              <td class="hd-shops">Магазины.</td>
-              <td class="hd-trade-reps">ТоргПреды</td>
-              <td class="hd-ordered">Заказано</td>
-              <td class="hd-delivered">Доставлено</td>
-              <td class="hd-paid">Оплачено</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="col-num">1</td>
-              <td class="col-period">07/09/18</td>
-              <td class="col-name">23 Кофе 46058432125</td>
-              <td class="col-city">Красноярск</td>
-              <td class="col-shops">1/100</td>
-              <td class="col-trade-reps">5</td>
-              <td class="col-ordered">10000</td>
-              <td class="col-delivered">10000</td>
-              <td class="col-paid">5000</td>
-            </tr>
-            <tr>
-              <td class="col-num">2</td>
-              <td class="col-period">07/09/18</td>
-              <td class="col-name">23 Кофе 46058432125</td>
-              <td class="col-city">Ижевск</td>
-              <td class="col-shops">25/150</td>
-              <td class="col-trade-reps">15</td>
-              <td class="col-ordered">15000</td>
-              <td class="col-delivered">10000</td>
-              <td class="col-paid">5000</td>
-            </tr>
-          </tbody>
-        </table>
+      </form>
 
-        <table id="table-ordered-02" class="data-table data-table--ordered-02">
-          <thead>
-            <tr>
-              <td class="hd-num">№</td>
-              <td class="hd-period">Период</td>
-              <td class="hd-name">Название</td>
-              <td class="hd-city">Город</td>
-              <td class="hd-shops">Магазины.</td>
-              <td class="hd-trade-reps">ТоргПреды</td>
-              <td class="hd-ordered">Заказано</td>
-              <td class="hd-delivered">Доставлено</td>
-              <td class="hd-paid">Оплачено</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="col-num">1</td>
-              <td class="col-period">07/09/18</td>
-              <td class="col-name">23 Кофе 46058432125</td>
-              <td class="col-city">Красноярск</td>
-              <td class="col-shops">1/100</td>
-              <td class="col-trade-reps">5</td>
-              <td class="col-ordered">10000</td>
-              <td class="col-delivered">10000</td>
-              <td class="col-status">Оплачено</td>
-            </tr>
-            <tr>
-              <td class="col-num">2</td>
-              <td class="col-period">07/09/18</td>
-              <td class="col-name">23 Кофе 46058432125</td>
-              <td class="col-city">Ижевск</td>
-              <td class="col-shops">25/150</td>
-              <td class="col-trade-reps">15</td>
-              <td class="col-ordered">15000</td>
-              <td class="col-delivered">10000</td>
-              <td class="col-status"><a href="" class="btn btn--table btn--pay">Оплатить</a></td>
-            </tr>
-          </tbody>
-       </table>
-
-
-       <table id="table-sku" class="data-table data-table--sku">
-          <thead>
-            <tr>
-              <td class="hd-num">№</td>
-              <td class="hd-sku">SKU</td>
-              <td class="hd-title">Название</td>
-              <td class="hd-category">Категория</td>
-              <td class="hd-brand">Бренд</td>
-              <td class="hd-mrc">МРЦ</td>
-              <td class="hd-photo">Фото</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="col-num">1</td>
-              <td class="col-sku">4604575748</td>
-              <td class="col-title">Сок J7 яблочный 1л</td>
-              <td class="col-category">Соки</td>
-              <td class="col-brand">J7</td>
-              <td class="col-mrc">75</td>
-              <td class="col-photo"><a href="" class="btn btn--table btn--load">Загрузить</a></td>
-            </tr>
-            <tr>
-              <td class="col-num">1</td>
-              <td class="col-sku">4604575748</td>
-              <td class="col-title">Кофе Jakobs 400г</td>
-              <td class="col-category">Кофе</td>
-              <td class="col-brand">Jakobs</td>
-              <td class="col-mrc">450</td>
-              <td class="col-photo"><a href="" class="btn btn--table btn--photo"></a></td>
-            </tr>
-          </tbody>
-       </table>
-
-
-        <table id="table-company" class="data-table data-table--company">
-          <thead>
-            <tr>
-              <td class="hd-num">№</td>
-              <td class="hd-company">Компания</td>
-              <td class="hd-contact">Контактное лицо</td>
-              <td class="hd-task-amount">Количество задач</td>
-              <td class="hd-complete">Выполнено</td>
-              <td class="hd-paid">Оплачено</td>
-              <td class="hd-debt">Задолженность</td>
-              <td class="hd-buttons"></td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="col-num">1</td>
-              <td class="col-company">ООО «Русское море»</td>
-              <td class="col-contact">Иванов Михаил</td>
-              <td class="col-task-amount">40</td>
-              <td class="col-complete">35</td>
-              <td class="col-paid">25</td>
-              <td class="col-debt">3500</td>
-              <td class="col-buttons">
-                <a href="" class="btn btn--table btn--change">Изменить</a>
-                <a href="" class="btn btn--table btn--contact">Связаться</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="col-num">2</td>
-              <td class="col-company">ООО «Русское море»</td>
-              <td class="col-contact">Иванов Михаил</td>
-              <td class="col-task-amount">40</td>
-              <td class="col-complete">35</td>
-              <td class="col-paid">25</td>
-              <td class="col-debt">3500</td>
-              <td class="col-buttons">
-                <a href="" class="btn btn--table btn--change">Изменить</a>
-                <a href="" class="btn btn--table btn--contact">Связаться</a>
-              </td>
-            </tr>
-          </tbody>
-       </table>
-
-
-        <table id="table-shops" class="data-table data-table--shops">
-          <thead>
-            <tr>
-              <td class="hd-num">№</td>
-              <td class="hd-shop-title">Название</td>
-              <td class="hd-address">Адрес</td>
-              <td class="hd-contact">Контактное лицо</td>
-              <td class="hd-ordered">Заказано</td>
-              <td class="hd-paid">Оплачено</td>
-              <td class="hd-debt">Задолженность</td>
-              <td class="hd-buttons"></td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="col-num">1</td>
-              <td class="col-shop-title">Орбита</td>
-              <td class="col-address">г.Красноярск, ул. Вавилова, д. 50</td>
-              <td class="col-contact">Иванов Михаил</td>
-              <td class="col-ordered">10000</td>
-              <td class="col-paid">6500</td>
-              <td class="col-debt">3500</td>
-              <td class="col-buttons">
-                <a href="" class="btn btn--table btn--change">Изменить</a>
-                <a href="" class="btn btn--table btn--contact">Связаться</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="col-num">2</td>
-              <td class="col-shop-title">Наш маркет</td>
-              <td class="col-address">г.Ижевск, ул. Декабристов, д.23</td>
-              <td class="col-contact">Иванов Иван</td>
-              <td class="col-ordered">20000</td>
-              <td class="col-paid">10000</td>
-              <td class="col-debt">10000</td>
-              <td class="col-buttons">
-                <a href="" class="btn btn--table btn--change">Изменить</a>
-                <a href="" class="btn btn--table btn--contact">Связаться</a>
-              </td>
-            </tr>
-          </tbody>
-       </table>
-
-
-        <table id="table-trade-reps" class="data-table data-table--trade-reps">
-          <thead>
-            <tr>
-              <td class="hd-num">№</td>
-              <td class="hd-phone">Телефон</td>
-              <td class="hd-contact">Контактное лицо</td>
-              <td class="hd-bank-details">Реквизиты</td>
-              <td class="hd-city">Город</td>
-              <td class="hd-complete">Выполнено</td>
-              <td class="hd-sum">Сумма</td>
-              <td class="hd-paid">Оплачено</td>
-              <td class="hd-debt">Задолженность</td>
-              <td class="hd-buttons"></td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="col-num">1</td>
-              <td class="col-phone">+7 (012) 345 67 89</td>
-              <td class="col-contact">Иванов Михаил</td>
-              <td class="col-bank-details">QIWI</td>
-              <td class="col-city">Красноярск</td>
-              <td class="col-complete">10/50</td>
-              <td class="col-sum">1000</td>
-              <td class="col-paid">500</td>
-              <td class="col-debt">500</td>
-              <td class="col-buttons">
-                <a href="" class="btn btn--table btn--pay">Оплатить</a>
-                <a href="" class="btn btn--table btn--change">Изменить</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="col-num">2</td>
-              <td class="col-phone">+7 (012) 345 67 89</td>
-              <td class="col-contact">Иванов Иван</td>
-              <td class="col-bank-details">Card</td>
-              <td class="col-city">Ижевск</td>
-              <td class="col-complete">12/16</td>
-              <td class="col-sum">2500</td>
-              <td class="col-paid">1000</td>
-              <td class="col-debt">1500</td>
-              <td class="col-buttons">
-                <a href="" class="btn btn--table btn--pay">Оплатить</a>
-                <a href="" class="btn btn--table btn--change">Изменить</a>
-              </td>
-            </tr>
-          </tbody>
-       </table>
-
-      </section>
-
+      </div>
     </section>
 
   </main>
-
 
   @@include('footer.html')
 

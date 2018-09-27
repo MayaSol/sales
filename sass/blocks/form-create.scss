@@ -1,0 +1,49 @@
+.form-create {
+  &__delimiter {
+    display: flex;
+    position: relative;
+    &--publication {
+      margin-bottom: 30px;
+    }
+    &--shops {
+      margin-bottom: 20px;
+    }
+  }
+  &__no {
+    width: 25px;
+    height: 25px;
+    background-color: #d55968;
+    border-radius: 50%;
+    line-height: 25px;
+    text-align: center;
+    vertical-align: middle;
+    color: #f8f8f8;
+    font-family: $font-family;
+    font-size: 21px;
+    font-weight: 400;
+    &::after {
+      content: '';
+      position: absolute;
+      top:50%;
+      left: 25px;
+      transform: translateY(50%);
+      display: block;
+      width: 520px;
+      height: 0;
+      border: 1px dotted #d5d5d5;
+    }
+  }
+  &__btn {
+    color: #ffffff;
+    font-family: $font-family;
+    font-size: 18px;
+    font-weight: 700;
+    &--submit {
+      width: 282px;
+      border-radius: 5px;
+      background-color: #d55968;
+      text-transform: none;
+    }
+  }
+
+}

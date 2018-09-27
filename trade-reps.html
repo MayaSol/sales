@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('head.html')
+
+<body>
+
+  @@include('header.html')
+
+
+  <main>
+
+    @@include('sidebar.html', {
+      "create-item-class": "",
+      "tasks-item-class": "",
+      "invoice-item-class": "",
+      "goods-item-class": "",
+      "clients-item-class": "",
+      "shops-item-class": "",
+      "trade-reps-item-class": "sidebar__item--active"
+    })
+
+
+    <section class="content">
+
+      @@include('breadcrumbs.html')
+
+
+      <section class="select">
+        <label for="select-city"><span>Город</span></label>
+        @@include('select-city.html')
+
+
+        <label for="select-warehouse"><span>Склад</span></label>
+        @@include('select-warehouse.html')
+      </section>
+
+      <section class="data">
+
+        <table id="table-trade-reps" class="data-table data-table--trade-reps">
+          <thead>
+            <tr>
+              <td class="hd-num">№</td>
+              <td class="hd-phone">Телефон</td>
+              <td class="hd-contact">Контактное лицо</td>
+              <td class="hd-bank-details">Реквизиты</td>
+              <td class="hd-city">Город</td>
+              <td class="hd-complete">Выполнено</td>
+              <td class="hd-sum">Сумма</td>
+              <td class="hd-paid">Оплачено</td>
+              <td class="hd-debt">Задолженность</td>
+              <td class="hd-buttons"></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-num">1</td>
+              <td class="col-phone">+7 (012) 345 67 89</td>
+              <td class="col-contact">Иванов Михаил</td>
+              <td class="col-bank-details">QIWI</td>
+              <td class="col-city">Красноярск</td>
+              <td class="col-complete">10/50</td>
+              <td class="col-sum">1000</td>
+              <td class="col-paid">500</td>
+              <td class="col-debt">500</td>
+              <td class="col-buttons">
+                <a href="" class="btn btn--table btn--pay">Оплатить</a>
+                <a href="" class="btn btn--table btn--change">Изменить</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-num">2</td>
+              <td class="col-phone">+7 (012) 345 67 89</td>
+              <td class="col-contact">Иванов Иван</td>
+              <td class="col-bank-details">Card</td>
+              <td class="col-city">Ижевск</td>
+              <td class="col-complete">12/16</td>
+              <td class="col-sum">2500</td>
+              <td class="col-paid">1000</td>
+              <td class="col-debt">1500</td>
+              <td class="col-buttons">
+                <a href="" class="btn btn--table btn--pay">Оплатить</a>
+                <a href="" class="btn btn--table btn--change">Изменить</a>
+              </td>
+            </tr>
+          </tbody>
+       </table>
+
+      </section>
+
+    </section>
+
+  </main>
+
+
+  @@include('footer.html')
+
+
+</body>
+</html>

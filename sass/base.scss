@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  width: 100%;
   min-width: 1150px;
   margin-left: auto;
   margin-right: auto;
@@ -28,7 +29,11 @@ body {
 
  .content {
   overflow: auto;
- }
+  flex-grow: 1;
+  &__inner {
+    padding: 20px 35px;
+  }
+}
 
 @mixin clearfix {
   &::after {

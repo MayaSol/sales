@@ -2,13 +2,11 @@ $html-size-base: 10px;
 $font-size: 1.4rem;
 $line-height: 1.4rem;
 $font-family: "OpenSans", Arial, sans-serif;
-
+$font-family--narrow: "Oswald", "Arial Narrow", sans-serif;
 
 $sidebar-width: 230px;
 $sidebar-bg-color: #4d4660;
 $sidebar-menu-color: #9fa9b0;
-
-
 
 @mixin bg-top {
   background-image: url("img/bg-top.png");
