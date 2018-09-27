@@ -1,4 +1,5 @@
 .create-shops {
+  margin-bottom: 28px;
   &__category-inner {
     display: flex;
     justify-content: space-between;
@@ -10,9 +11,19 @@
       margin-right: 0;
     }
   }
+  &__header {
+    color: #141414;
+    font-family: $font-family;
+    font-size: 18px;
+    font-weight: 700;
+  }
   label {
     position: relative;
     padding-left: 30px;
+    color: #141414;
+    font-family: $font-family;
+    font-size: 15px;
+    font-weight: 700;
     &::before {
       content: '';
       display: block;
@@ -24,6 +35,7 @@
       height: 20px;
       background-image: url('img/icon-unchecked-small.svg');
     }
+    cursor: pointer;
   }
   input[type="checkbox"] {
     display: none;
@@ -31,4 +43,27 @@
   input[type="checkbox"]:checked~label::before {
     background-image: url('img/icon-checked-small.svg');
   }
+  .select__wrapper--city {
+    margin-top: 8px;
+    select {
+    color: #555555;
+    font-family: $font-family;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  }
+  .select {
+    &--hyper,
+    &--super,
+    &--shop {
+        margin-top: 10px;
+      select {
+        color: #555555;
+        font-family: $font-family;
+        font-size: 15px;
+        font-weight: 400;
+      }
+    }
+  }
+
 }

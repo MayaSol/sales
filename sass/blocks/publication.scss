@@ -2,7 +2,16 @@
   display: flex;
   justify-content: space-between;
   &__label-date {
-    //display: block;
+    color: #141414;
+    font-family: $font-family;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  &__subheader {
+    color: #141414;
+    font-family: $font-family;
+    font-size: 15px;
+    font-weight: 700;
   }
   &__period-inner {
     display: flex;
@@ -14,6 +23,7 @@
       font-family: $font-family;
       font-size: 15px;
       font-weight: 700;
+      cursor: pointer;
       &::before {
         content: '';
         position: absolute;
