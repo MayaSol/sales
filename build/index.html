@@ -144,7 +144,7 @@
           <div class="create-goods__row">
             <div class="select select--sku">
   <div class="select__wrapper select__wrapper--sku">
-    <select id="select-sku">
+    <select>
       <option value="" disabled selected>Выберите или добавьте SKU...</option>
       <option value="sku-01">sku111111</option>
       <option value="sku-02">sku222222</option>
@@ -162,7 +162,7 @@
 
             <div class="select select--brend">
   <div class="select__wrapper select__wrapper--brend">
-    <select id="select-brend">
+    <select>
       <option value="" disabled selected>Выберите или добавьте бренд</option>
       <option value="brend-01">J7</option>
       <option value="brend-02">Brend 2</option>
@@ -180,7 +180,7 @@
 
             <div class="select select--category">
   <div class="select__wrapper select__wrapper--category">
-    <select id="select-category">
+    <select>
       <option value="" disabled selected>Выберите/добавьте категорию</option>
       <option value="category-01">category 1</option>
       <option value="category-02">category 2</option>
@@ -210,7 +210,7 @@
           <div class="create-goods__row">
             <div class="select select--sku">
   <div class="select__wrapper select__wrapper--sku">
-    <select id="select-sku">
+    <select>
       <option value="" disabled selected>Выберите или добавьте SKU...</option>
       <option value="sku-01">sku111111</option>
       <option value="sku-02">sku222222</option>
@@ -228,7 +228,7 @@
 
             <div class="select select--brend">
   <div class="select__wrapper select__wrapper--brend">
-    <select id="select-brend">
+    <select>
       <option value="" disabled selected>Выберите или добавьте бренд</option>
       <option value="brend-01">J7</option>
       <option value="brend-02">Brend 2</option>
@@ -246,7 +246,7 @@
 
             <div class="select select--category">
   <div class="select__wrapper select__wrapper--category">
-    <select id="select-category">
+    <select>
       <option value="" disabled selected>Выберите/добавьте категорию</option>
       <option value="category-01">category 1</option>
       <option value="category-02">category 2</option>
@@ -276,7 +276,7 @@
           <div class="create-goods__row">
             <div class="select select--sku">
   <div class="select__wrapper select__wrapper--sku">
-    <select id="select-sku">
+    <select>
       <option value="" disabled selected>Выберите или добавьте SKU...</option>
       <option value="sku-01">sku111111</option>
       <option value="sku-02">sku222222</option>
@@ -294,7 +294,7 @@
 
             <div class="select select--brend">
   <div class="select__wrapper select__wrapper--brend">
-    <select id="select-brend">
+    <select>
       <option value="" disabled selected>Выберите или добавьте бренд</option>
       <option value="brend-01">J7</option>
       <option value="brend-02">Brend 2</option>
@@ -312,7 +312,7 @@
 
             <div class="select select--category">
   <div class="select__wrapper select__wrapper--category">
-    <select id="select-category">
+    <select>
       <option value="" disabled selected>Выберите/добавьте категорию</option>
       <option value="category-01">category 1</option>
       <option value="category-02">category 2</option>
@@ -349,6 +349,10 @@
             <div class="motivation__col motivation__col--percent">
               <div class="motivation__col-inner">
                 <div class="motivation__subheader">Процент от продаж</div>
+                  <div class="motivation__checkbox">
+                    <input type="checkbox" name="motivation" value="percent" id="motivation-percent">
+                    <label for="motivation-percent"></label>
+                  </div>
                 <div class="motivation__input motivation__input--percent">
                   <input type="number">
                   <div><span>&#37;</span></div>
@@ -358,6 +362,11 @@
             <div class="motivation__col motivation__col--retro-bonus">
               <div class="motivation__col-inner">
                 <div class="motivation__subheader">Ретро Бонус</div>
+
+                  <div class="motivation__checkbox">
+                    <input type="checkbox" name="motivation" value="retro-bonus" id="motivation-retro-bonus">
+                    <label for="motivation-retro-bonus"></label>
+                  </div>
 
                   <div class="motivation__row motivation__row--retro-bonus">
                     <div class="motivation__input motivation__input--bonus">
@@ -400,7 +409,13 @@
             <div class="motivation__col motivation__col--enter-shop">
               <div class="motivation__col-inner">
                 <div class="motivation__subheader">Вход в магазин</div>
-                <div class="motivation__input motivation__input--enter-shop">
+
+                  <div class="motivation__checkbox">
+                    <input type="checkbox" name="motivation" value="enter-shop" id="motivation-enter-shop">
+                    <label for="motivation-enter-shop"></label>
+                  </div>
+
+               <div class="motivation__input motivation__input--enter-shop">
                   <input type="number">
                   <div><span>&#x20bd;</span></div>
                 </div>
@@ -461,7 +476,7 @@
                   <label for="shops-super">Супермаркеты</label>
                   <div class="select select--super">
   <div class="select__wrapper select__wrapper--super">
-    <select id="select-super">
+    <select>
       <option value="" disabled selected>Выберите супермаркет...</option>
       <option value="super-01">супермаркет 1</option>
       <option value="super-02">супермаркет 2</option>
@@ -481,7 +496,7 @@
                   <label for="shops-shop">Магазины</label>
                   <div class="select select--shop">
   <div class="select__wrapper select__wrapper--shop">
-    <select id="select-shop">
+    <select>
       <option value="" disabled selected>Выберите магазин...</option>
       <option value="shop-01">магазин 1</option>
       <option value="shop-02">магазин 2</option>
@@ -508,7 +523,17 @@
         <section class="publication">
           <div class="publication__date">
             <label for="publication-date" class="publication__label-date">Дата публикации</label>
-            <input type="date" placeholder="" id="publication-date">
+            <!--input type="date" placeholder="" id="publication-date"-->
+            <div class="field-calendar">
+  <div class="field-calendar__inner">
+    <input placeholder="Выберите дату" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
+    <div class="field-calendar__icon">
+      <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-calendar"></use>
+      </svg>
+    </div>
+  </div>
+</div>
+
           </div>
 
           <div class="publication__period">
