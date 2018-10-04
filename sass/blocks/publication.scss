@@ -3,6 +3,8 @@
   justify-content: space-between;
   margin-bottom: 70px;
   &__label-date {
+    display: block;
+    margin-bottom: 5px;
     color: #141414;
     font-family: $font-family;
     font-size: 18px;

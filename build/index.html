@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
   <title>Document</title>
   <link rel="stylesheet" href="style.min.css">
+  <link rel="stylesheet" href="node_modules/jquery-ui/themes/base/all.css">
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/jquery-ui/ui/widgets/datepicker.js"></script>
 </head>
 
 
@@ -116,7 +118,6 @@
 
 
     <section class="content">
-      <div class="content__inner">
 
     <section class="breadcrumbs__container">
       <ul class="breadcrumbs">
@@ -526,7 +527,7 @@
             <!--input type="date" placeholder="" id="publication-date"-->
             <div class="field-calendar">
   <div class="field-calendar__inner">
-    <input placeholder="Выберите дату" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
+    <input type="text" id="publication-date" placeholder="Выберите дату">
     <div class="field-calendar__icon">
       <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-calendar"></use>
       </svg>
@@ -559,7 +560,6 @@
 
       </form>
 
-      </div>
     </section>
 
   </main>
@@ -572,6 +572,10 @@
       Version <span class="footer__version-num">1.1</span>
     </span>
   </footer>
+
+  <script src="js-min/fields-calendar.js">
+  </script>
+
 
 
 </body>

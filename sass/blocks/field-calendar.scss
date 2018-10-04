@@ -5,10 +5,10 @@
     height: 41px;
     background: transparent;
     border: 0;
-    font-family: $font-family--narrow;
-    appearance: none;            /* remove arrow        */
-    -webkit-appearance: none;    /* remove arrow Chrome */
-    -moz-appearance: none;       /* remove arrow FF     */
+    font-family: Arial, sans-serif;
+    //appearance: none;            /* remove arrow        */
+    //-webkit-appearance: none;    /* remove arrow Chrome */
+    //-moz-appearance: none;       /* remove arrow FF     */
     box-sizing: border-box;
     &::-webkit-inner-spin-button,
     &::-webkit-calendar-picker-indicator {
@@ -38,6 +38,7 @@
     height: 100%;
     border-left: 1px solid #d3d6df;
     z-index: -1;
+    cursor: pointer;
     svg {
       position: absolute;
       top: 50%;
@@ -49,4 +50,9 @@
       z-index: -1;
     }
   }
+}
+
+#ui-datepicker-div {
+  font-size: 12px;
+  line-height: 2;
 }

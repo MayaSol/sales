@@ -1,1 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30"><defs><path id="dq87a" d="M440 541.4a14.4 14.4 0 1 1 0-28.8 14.4 14.4 0 0 1 0 28.8zm0-27.22a12.82 12.82 0 1 0 0 25.64 12.82 12.82 0 0 0 0-25.64z"/><path id="dq87b" d="M446.24 523.01h-1.82l-4.3 8.62-4.31-8.62h-1.82l5.13 9.98h1.97z"/></defs><g><g transform="translate(-425 -512)"><use fill="#4d4660" xlink:href="#dq87a"/></g><g transform="translate(-425 -512)"><use fill="#4d4660" xlink:href="#dq87b"/></g></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 23 14"
+   version="1.1"
+   id="svg75"
+   sodipodi:docname="icon-arrow-down.svg"
+   inkscape:version="0.92.3 (unknown)">
+  <metadata
+     id="metadata81">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs79" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1315"
+     inkscape:window-height="744"
+     id="namedview77"
+     showgrid="false"
+     inkscape:zoom="43"
+     inkscape:cx="11.5"
+     inkscape:cy="7"
+     inkscape:window-x="51"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg75" />
+  <path
+     d="M 1,1.2584202 11,12.25842 22,1.2584202"
+     id="path73"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#d3d6df;stroke-width:2" />
+</svg>

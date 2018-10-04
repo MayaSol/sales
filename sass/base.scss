@@ -19,20 +19,19 @@ body {
   justify-content: space-between;
   margin:0;
   padding:0;
+  background-color: #edf0f5;
 }
 
  main {
   display: flex;
   height: 100vh;
   overflow: hidden;
- }
+}
 
  .content {
   overflow: auto;
   flex-grow: 1;
-  &__inner {
-    padding: 20px 35px;
-  }
+  padding: 20px 35px;
 }
 
 @mixin clearfix {
